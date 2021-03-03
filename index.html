@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends Episode Finder</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a href="#" class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+            <span class="ml-3 text-xl">Friends Episode Finder</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="mailto:mehrasahil495@gmail.com" class="mr-5 hover:text-white">Contact me</a>
+            <a target="_blank" href="https://github.com/sahilmehra2412/friends-episode-server" class="mr-5 hover:text-white">Contribute</a>
+          </nav>
+          <a target="_blank" href="https://www.buymeacoffee.com/sahilmehra" class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Donate
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+        </a>
+        </div>
+    </header>
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Search any F.R.I.E.N.D.S. episode just by dialogue</h1>
+            <p class="mb-8 leading-relaxed">Want to know which episode has one of the many famous <cite> F.R.I.E.N.D.S </cite>dialogues? 
+                Just type that dialogue in here and get the episode</p>
+            <div class="flex w-full md:justify-start justify-center items-end">
+              <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
+                <label for="hero-field" class="leading-7 text-sm text-gray-400">Dialogue</label>
+                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-800 rounded bg-opacity-40 border border-gray-700 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+              <button id="get-result" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Find Episode</button>
+            </div>
+            <p class="text-sm mt-2 text-gray-500 mb-8 w-full">Currently it doen't support auto-correction, please type exact dialogue</p>
+            <div class="flex lg:flex-row md:flex-col text-gray-300">
+                <a target="_blank" href="https://www.netflix.com/in/title/70153404" class="bg-gray-800 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-700 hover:text-white focus:outline-none lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="50" height="50"
+                        viewBox="0 0 172 172"
+                        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><circle cx="77" cy="13" transform="scale(1.72,1.72)" r="1" fill="#000000"></circle><circle cx="50" cy="50" transform="scale(1.72,1.72)" r="37" fill="#1f2937"></circle><circle cx="83" cy="15" transform="scale(1.72,1.72)" r="4" fill="#000000"></circle><circle cx="87" cy="24" transform="scale(1.72,1.72)" r="2" fill="#000000"></circle><circle cx="81" cy="76" transform="scale(1.72,1.72)" r="2" fill="#000000"></circle><circle cx="15" cy="63" transform="scale(1.72,1.72)" r="4" fill="#000000"></circle><circle cx="25" cy="87" transform="scale(1.72,1.72)" r="2" fill="#000000"></circle><circle cx="23.5" cy="67.5" transform="scale(1.72,1.72)" r="2.5" fill="#ffffff"></circle><circle cx="77.5" cy="30.5" transform="scale(1.72,1.72)" r="1.5" fill="#ffffff"></circle><g><path d="M61.404,42.484h16.512v87.13692l-16.512,1.50156z" fill="#ecf0f1"></path><path d="M76.712,43.688v84.83384l-14.104,1.2814v-86.11524h14.104M79.12,41.28h-18.92v91.16l18.92,-1.72v-89.44z" fill="#472b29"></path><path d="M94.084,129.62092v-87.13692h16.512v88.63848z" fill="#ecf0f1"></path><path d="M109.392,43.688v86.11524l-14.104,-1.2814v-84.83384h14.104M111.8,41.28h-18.92v89.44l18.92,1.72v-91.16z" fill="#472b29"></path><path d="M93.7486,129.58996l-31.82688,-87.10596h16.35032l31.75808,88.58516z" fill="#ecf0f1"></path><path d="M77.4258,43.688l30.83444,86.01204l-13.64132,-1.24012l-30.97548,-84.77192h13.78236M79.12,41.28h-18.92l32.68,89.44l18.92,1.72l-32.68,-91.16z" fill="#472b29"></path><path d="M105.78,61.92c-0.47472,0 -0.86,-0.38528 -0.86,-0.86v-13.76c0,-0.47472 0.38528,-0.86 0.86,-0.86c0.47472,0 0.86,0.38528 0.86,0.86v13.76c0,0.47472 -0.38528,0.86 -0.86,0.86z" fill="#472b29"></path><path d="M66.22,82.56c-0.47472,0 -0.86,-0.38528 -0.86,-0.86v-13.76c0,-0.47472 0.38528,-0.86 0.86,-0.86c0.47472,0 0.86,0.38528 0.86,0.86v13.76c0,0.47472 -0.38528,0.86 -0.86,0.86z" fill="#472b29"></path><g fill="#472b29"><path d="M66.22,127.28c-0.47472,0 -0.86,-0.38528 -0.86,-0.86v-27.52c0,-0.47472 0.38528,-0.86 0.86,-0.86c0.47472,0 0.86,0.38528 0.86,0.86v27.52c0,0.47472 -0.38528,0.86 -0.86,0.86z"></path></g><g fill="#472b29"><path d="M66.22,94.6c-0.47472,0 -0.86,-0.38528 -0.86,-0.86v-6.88c0,-0.47472 0.38528,-0.86 0.86,-0.86c0.47472,0 0.86,0.38528 0.86,0.86v6.88c0,0.47472 -0.38528,0.86 -0.86,0.86z"></path></g><g fill="#472b29"><path d="M105.78,101.48c-0.47472,0 -0.86,-0.38528 -0.86,-0.86v-34.4c0,-0.47472 0.38528,-0.86 0.86,-0.86c0.47472,0 0.86,0.38528 0.86,0.86v34.4c0,0.47472 -0.38528,0.86 -0.86,0.86z"></path></g></g></g></g></svg>
+                    <span class="ml-4 flex items-start flex-col leading-none">
+                    <span class="text-xs text-gray-400 mb-1">WATCH FRIENDS ON</span>
+                    <span class="title-font font-medium">NETFLIX</span>
+                  </span>
+                </a>
+              </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="https://cdn.vox-cdn.com/thumbor/yzePlAdBf52QI_l-PJrNidSS9Gs=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/15002495/friendscast.0.0.1429818191.jpg">
+          </div>
+        </div>
+    </section>
+    <div id="result" style="margin: auto;overflow: hidden;" class="flex flex-col">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-900">
+                  <tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Name</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Title</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody" class="bg-gray-700 divide-y divide-gray-600">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>  
+    <footer class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <span class="ml-3 text-xl">Friends Episode Finder</span>
+          </a>
+          <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
+            <a href="https://twitter.com/imSahilMehra" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@imSahilMehra</a>
+          </p>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+</body>
+</html>
