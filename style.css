@@ -1,0 +1,22 @@
+html, body{
+    height: 100%;
+}
+#loader {
+    margin: 0 0 2em;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.svg path,
+.svg rect {
+fill: rgba(99,102,241, 1);
+}

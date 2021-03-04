@@ -4,11 +4,14 @@ let btn = document.getElementById("get-result");
 let input = document.getElementById("hero-field");
 let div = document.getElementById("result");
 let tbody = document.getElementById("tbody");
+let loader = document.getElementById("loader");
 
 div.style.display = "none";
 
 
 let getEpisodes = () => {
+
+    loader.style.display = "flex";
 
     tbody.innerHTML = "";
 
@@ -50,8 +53,13 @@ let getEpisodes = () => {
                 console.log(entry)
             }
             tbody.append(tr);
-        }
+        };
+        loader.style.display = "none";
     })
 }
 
 btn.addEventListener('click', getEpisodes);
+
+window.onload = ()=>{
+    loader.style.display = "none";
+}
