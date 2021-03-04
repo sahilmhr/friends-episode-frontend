@@ -55,8 +55,3 @@ let getEpisodes = () => {
 }
 
 btn.addEventListener('click', getEpisodes);
-
-// window.onload = _ =>{
-//     input.value = "Joey doesn't share food";
-//     btn.click();
-// }
