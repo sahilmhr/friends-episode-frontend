@@ -20,3 +20,7 @@ html, body{
 .svg rect {
 fill: rgba(99,102,241, 1);
 }
+
+input.invalid{
+    border: 1px solid red;
+}
