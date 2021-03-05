@@ -112,5 +112,5 @@ let pageViewCounter =()=>{
 
 window.onload = () => {
     loader.style.display = "none";
-    // pageViewCounter()
+    pageViewCounter()
 }

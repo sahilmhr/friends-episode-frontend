@@ -24,7 +24,3 @@ fill: rgba(99,102,241, 1);
 input.invalid{
     border: 1px solid red;
 }
-.buy {
-    position: relative;
-    left: 10%;
-}
