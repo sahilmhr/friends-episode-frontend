@@ -53,7 +53,7 @@ let getEpisodes = () => {
                         let episode = parseInt(info.substring(18));
                         let patt = /\W\d{2}\W.*\d{2}/
                         if (info.match(patt)) {
-                            fetch(`http://api.tvmaze.com/shows/431/episodebynumber?season=${season}&number=${episode}`).then(response => {
+                            fetch(`https://api.tvmaze.com/shows/431/episodebynumber?season=${season}&number=${episode}`).then(response => {
                                 if (response.ok) {
                                     return response.json();
                                 }
