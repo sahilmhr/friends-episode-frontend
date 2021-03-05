@@ -80,6 +80,15 @@ let getEpisodes = () => {
 
 btn.addEventListener('click', getEpisodes);
 
+let pageViewCounter =()=>{
+    fetch("https://api.countapi.xyz/hit/friends-site/QF5G07PhqO").then(response=>{
+        return response.json();
+    }).then(data=>{
+        console.log(data);
+    })
+}
+
 window.onload = () => {
     loader.style.display = "none";
+    pageViewCounter()
 }
