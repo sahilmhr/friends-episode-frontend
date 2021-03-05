@@ -32,7 +32,8 @@ let getEpisodes = () => {
         div.style.display = "block";
         for (const entry of Object.entries(result)) {
             let tr = document.createElement('tr');
-            for (let i = 0; i < 2; i++) {
+            let check = false;
+            for (let i = 0; i < 3; i++) {
                 let td = document.createElement("td");
                 td.classList.add("px-6", "py-4", "whitespace-nowrap");
                 let div1 = document.createElement("div");
@@ -44,13 +45,32 @@ let getEpisodes = () => {
                 if (!isNaN(parseInt(entry[i]))) {
                     div3.innerHTML = parseInt(entry[i]) + 1;
                 } else {
-                    div3.innerHTML = entry[i];
+                    let info = String(entry[1]);
+                    if (check) {
+                        div3.innerHTML = info;
+                    } else {
+                        let season = parseInt(info.substring(7, 9));
+                        let episode = parseInt(info.substring(18));
+                        let patt = /\W\d{2}\W.*\d{2}/
+                        if (info.match(patt)) {
+                            fetch(`http://api.tvmaze.com/shows/431/episodebynumber?season=${season}&number=${episode}`).then(response => {
+                                if (response.ok) {
+                                    return response.json();
+                                }
+                                return "Some error!"
+                            }).then(data => {
+                                div3.innerHTML = data['name'];
+                            })
+                        } else {
+                            console.log("Regex")
+                        }
+                        check = true;
+                    }
                 }
                 div2.append(div3);
                 div1.append(div2);
                 td.append(div1);
                 tr.append(td);
-                console.log(entry)
             }
             tbody.append(tr);
         };
@@ -60,6 +80,6 @@ let getEpisodes = () => {
 
 btn.addEventListener('click', getEpisodes);
 
-window.onload = ()=>{
+window.onload = () => {
     loader.style.display = "none";
 }
