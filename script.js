@@ -8,6 +8,14 @@ let loader = document.getElementById("loader");
 
 div.style.display = "none";
 
+let clickCounter =()=>{
+    fetch("https://api.countapi.xyz/hit/friends-site/click").then(response=>{
+        return response.json();
+    }).then(data=>{
+        console.log("Click")
+        console.log(data);
+    })
+}
 
 let getEpisodes = () => {
 
@@ -76,6 +84,7 @@ let getEpisodes = () => {
         };
         loader.style.display = "none";
     })
+    clickCounter();
 }
 
 btn.addEventListener('click', getEpisodes);
